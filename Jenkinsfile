@@ -8,13 +8,13 @@ pipeline {
         ECR_REPOSITORY = 'docker-image'
     }
     
-    // stages {
-    //     stage('Checkout') {
-    //         steps {
-    //             // Checkout your Git repository
-    //             git 'https://github.com/santhoshgullapudi/spring-petclinic.git'
-    //         }
-    //     }
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout your Git repository
+                git 'https://github.com/santhoshgullapudi/spring-petclinic.git'
+            }
+        }
         
         stage('Build and Push Docker Image') {
             steps {
