@@ -7,14 +7,6 @@ pipeline {
         AWS_ACCOUNT_ID = '381492106362'
         ECR_REPOSITORY = 'docker-image'
     }
-    
-    stages {
-        stage('Checkout') {
-            steps {
-                // Checkout your Git repository
-                git 'https://github.com/santhoshgullapudi/spring-petclinic.git'
-            }
-        }
         
         stage('Build and Push Docker Image') {
             steps {
@@ -31,5 +23,4 @@ pipeline {
                 }
             }
         }
-    }
 }
